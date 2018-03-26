@@ -9,8 +9,8 @@
       </symbol>
       <div class="navbar">
         <div class="navbar-left-container">
-          <a href="/">
-            <img class="navbar-brand-logo" src="static/logo.png"></a>
+          <router-link to="/">
+            <img class="navbar-brand-logo" src="static/logo.png"></router-link>
         </div>
         <div class="navbar-right-container" style="display: flex;">
           <div class="navbar-menu-container">
@@ -20,11 +20,11 @@
             <a href="javascript:void(0)" class="navbar-link" v-show="nickName" @click="logout">Logout</a>
             <div class="navbar-cart-container">
               <span class="navbar-cart-count" v-if="cartCount>0">{{cartCount}}</span>
-              <a class="navbar-link navbar-cart-link" href="/#/cartList">
+              <router-link class="navbar-link navbar-cart-link" to="/cartList">
                 <svg class="navbar-cart-logo">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use>
                 </svg>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

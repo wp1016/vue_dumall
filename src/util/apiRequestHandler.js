@@ -76,7 +76,7 @@ Axios.interceptors.response.use(
   }
 );
 
-const BASR_URL = "http://localhost:3000";
+const BASR_URL = "http://10.5.9.84:3000";
 
 /**
  * 

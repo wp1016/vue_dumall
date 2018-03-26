@@ -69,7 +69,7 @@
                       </a>
                     </div>
                     <div class="cart-item-pic">
-                      <img :src="`/static/${item.productImage}`">
+                      <img :src="`static/${item.productImage}`">
                     </div>
                     <div class="cart-item-title">
                       <div class="item-name">{{item.productName}}</div>

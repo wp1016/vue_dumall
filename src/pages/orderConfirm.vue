@@ -61,7 +61,7 @@
             <li v-for="(item,index) in cartList" :key="index" v-if="item.checked=='1'">
               <div class="cart-tab-1">
                 <div class="cart-item-pic">
-                  <img :src="`/static/${item.productImage}`" alt="">
+                  <img :src="`static/${item.productImage}`" alt="">
                 </div>
                 <div class="cart-item-title">
                   <div class="item-name">{{item.productName}}</div>
