@@ -68,8 +68,8 @@ export default {
     return {
       userName: "",
       userPwd: "",
-      errorTip: false,
-      errMsg: "",
+      errorTip: true,
+      errMsg: "默认账号:admin,密码:123456",
       loginModelFlag: false
     };
   },

@@ -167,7 +167,7 @@ export default {
     this.queryCartList();
   },
   methods: {
-    queryCartList() {
+    queryCartList() {//查询购物车列表
       this.$http({
         method: "get",
         url: "api/v1/carts/queryCartList.node"
@@ -186,7 +186,7 @@ export default {
           this.cartList = [];
         });
     },
-    addItemNum(idx) {
+    addItemNum(idx) {//增加商品数量
       if (this.isLoading) {
         return;
       }
@@ -210,7 +210,7 @@ export default {
           console.log(err);
         });
     },
-    minusItemNum(idx) {
+    minusItemNum(idx) {//减少商品数量
       if (this.isLoading) {
         return;
       }
@@ -237,7 +237,7 @@ export default {
           console.log(err);
         });
     },
-    deleteItem(idx, productId) {
+    deleteItem(idx, productId) {//删除商品
       this.modalConfirm = true;
       this.checkedItem.index = idx;
       this.checkedItem.productId = productId;
@@ -252,7 +252,7 @@ export default {
       })
         .then(res => {
           if (res.data.resultCode === "000000") {
-            this.cartList.splice(this.checkedItem, 1);
+            this.cartList.splice(this.checkedItem.index, 1);
             this.modalConfirm = false;
           }
         })
@@ -273,7 +273,6 @@ export default {
         this.checkCount = this.cartList.length;
       }
       this.checkAll = !this.checkAll;
-      this.sumTotal();
     },
     selectProduct(index) {
       let productId = this.cartList[index].productId;
